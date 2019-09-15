@@ -1,0 +1,197 @@
+.main-form
+  .label
+    &__input
+      position relative
+      display block
+      margin-bottom 25px
+
+      @media w_768
+        margin-bottom 15px
+
+      .jq-selectbox
+        max-width 320px
+        display block
+        margin 0 auto
+
+        &.changed
+          .jq-selectbox__select
+            .jq-selectbox__select-text
+              color $cBlack
+
+        &.focused
+          .jq-selectbox__select
+            border 1px solid $cBlue
+
+        &.opened
+          .jq-selectbox__select
+            .jq-selectbox__trigger
+              .jq-selectbox__trigger-arrow
+                transform rotate(180deg)
+
+        .jq-selectbox__select
+          display block
+          width 100%
+          height 60px
+          border 1px solid $cGray_l
+          border-radius 3px
+          background transparent
+          box-shadow none
+          padding 0 35px
+
+          @media w_768
+            height 40px
+
+          .jq-selectbox__select-text
+            height 60px
+            display flex
+            align-items center
+            align-content center
+            justify-content center
+            font-size 24px
+            font-weight 400
+            color $cGray_m
+
+            @media w_768
+              height 40px
+              font-size 20px
+
+          .jq-selectbox__trigger
+            height 60px
+            width 40px
+            display flex
+            align-content center
+            align-items center
+            justify-content center
+            border none
+
+            @media w_768
+              height 40px
+
+            .jq-selectbox__trigger-arrow
+              border none
+              position relative
+              width 14px
+              height 9px
+              background url('../img/sprite.svg#angle-view') 50% no-repeat
+              top auto
+              left auto
+              right auto
+              transition all 0.2s ease-in-out
+              transform rotate(0)
+
+        .jq-selectbox__dropdown
+          margin-top 0
+          box-shadow -3px 3px 8px rgba(0,0,0,0.1)
+          border 1px solid $cGray_l
+          padding 20px 0
+
+          ul
+            height auto
+            max-height 9999999px !important
+
+            li
+              display flex
+              align-items center
+              align-content center
+              justify-content center
+              color $cBlue
+              height 40px
+              font-size 20px
+              font-weight 400
+
+              &:first-child
+                display none
+
+              &:hover
+                background transparent
+
+              &.selected
+                background $cGray_l !important
+
+        .mCustomScrollbar
+          max-height 300px
+
+          .mCustomScrollBox
+            overflow hidden
+
+          .mCSB_draggerRail
+            background transparent
+
+          .mCSB_dragger
+            background #d9d9d9
+            width 5px
+            border-radius 3px
+
+            .mCSB_dragger_bar
+              background transparent
+
+    &__title
+      position absolute
+      left 0
+      right 0
+      top 50%
+      transform translateY(-50%)
+      font-size 24px
+      font-weight 400
+      color $cGray_m
+      transition all 0.2s ease-in-out
+      text-align center
+
+      @media w_768
+        font-size 20px
+
+    &__checkbox
+      display inline-flex
+      cursor pointer
+
+      &:hover
+        .psevdocheckbox
+          background #e9efff
+
+      input
+        width 0
+        height 0
+        overflow hidden
+        opacity 0
+
+        &:focus + .psevdocheckbox
+          box-shadow 0 0 3px rgba(67,89, 147,1)
+          background #e9efff
+
+        &:checked + .psevdocheckbox
+          background $cBlue
+
+          &:after
+            opacity 1
+
+      .psevdocheckbox
+        display inline-block
+        vertical-align top
+        width 20px
+        height 20px
+        border-radius 2px
+        border 1px solid $cBlue
+        margin-right 15px
+        transition all 0.2s ease-in-out
+        position relative
+
+        &:after
+          position absolute
+          content ""
+          opacity 0
+          width 13px
+          height 9px
+          top 50%
+          left 50%
+          transform translate(-50%,-50%)
+          background url('../img/sprite.svg#checkbox-view') top left no-repeat
+          transition all 0.2s ease-in-out
+
+      span
+        display inline-block
+        vertical-align top
+        width calc(100% - 60px)
+        font-size 16px
+        line-height 20px
+
+

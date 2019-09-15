@@ -1,0 +1,255 @@
+.profile
+  padding-top 80px
+  position relative
+  z-index 5
+
+  @media w_768
+    padding-top 45px
+
+  &__title
+    background-size cover
+    padding 114px 0 23px
+    position relative
+    background url("../img/bg__header-1920@1x.jpg") no-repeat 50% 50%
+    background-size cover !important
+
+    @media w_1440
+      background url("../img/bg__header-1440@1x.jpg") no-repeat 50% 50%
+    @media w_1024
+      background url("../img/bg__header-1024@1x.jpg") no-repeat 50% 50%
+    @media w_768
+      padding 30px 0 23px
+      background url("../img/bg__header-768@1x.jpg") no-repeat 50% 50%
+    @media w_480
+      background url("../img/bg__header-480@1x.jpg") no-repeat 50% 50%
+
+    &__bg
+      position absolute
+      left 0
+      top 0
+      right 0
+      bottom 0
+      z-index 0
+      overflow hidden
+
+      source,
+      img
+        width 100%
+        height 100%
+        object-fit cover
+
+    &:after
+      position absolute
+      content ""
+      left 0
+      right 0
+      bottom -10px
+      height 70%
+      background linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 100%))
+
+      @media w_768
+        height 100%
+        background linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 100%))
+
+    h1
+      position relative
+      z-index 10
+
+  &__section
+    padding 35px 0 16px
+
+    @media  w_768
+      padding 15px 0
+
+  &__header
+    max-width 540px
+    margin 0 auto 45px
+
+    @media w_768
+      margin 0 auto 30px
+
+    h2
+      margin-bottom 8px
+
+      &:last-child
+        margin-bottom 0
+
+    p
+      font-size 16px
+      line-height 24px
+      display block
+      text-align center
+      padding 0 10px
+
+  &__content
+    display block
+    margin 0 auto
+
+    &_small
+      max-width 520px
+
+    &_expirience
+      padding-bottom 70px
+      column-count 3
+
+      @media w_768
+        column-count 2
+        padding-bottom 20px
+
+      @media w_480
+        column-count 1
+
+      .label__checkbox
+        display block
+        margin-bottom 15px
+
+    &_js
+      padding-bottom 55px
+
+      @media w_768
+        padding-bottom 20px
+
+      @media w_480
+        display flex
+        flex-flow row-reverse
+        align-items stretch
+        align-content stretch
+
+      .noUi-target
+        height 15px
+        box-shadow none
+        border none
+        border-radius 0
+        background transparent
+        position relative
+        z-index 0
+
+        @media w_480
+          width 15px
+          height auto
+          margin-right 20px
+          margin-top 20px
+          margin-bottom 27px
+
+        .noUi-base
+          .noUi-connects
+            overflow hidden
+            position relative
+            border-radius 0
+            background linear-gradient(to right, $cViolet, $cBlue) !important
+            clip-path polygon(0 50%, 100% 0, 100% 100%, 0% 100%)
+
+            @media w_480
+              margin-bottom -27px
+              clip-path polygon(0 0, 50% 0, 100% 100%, 0% 100%)
+              background linear-gradient(to bottom, $cViolet, $cBlue) !important
+
+        .noUi-connect
+          background transparent
+          height 36px
+          background $cGray_m
+
+          @media w_480
+            height 100%
+            width 20px
+
+      .noUi-handle
+        cursor pointer
+        box-shadow none
+        border none
+        margin-top 20px
+        right -15px !important
+        width 30px !important
+        height 33px !important
+        background url('../img/sprite.svg#marker-view') top left no-repeat
+
+        @media w_480
+          transform rotate(90deg)
+          right 30px
+          left -30px !important
+          right auto
+          top -37px !important
+
+        &:after
+          display none
+
+        &:before
+          position absolute
+          content ""
+          width 1px
+          height 10px
+          background $cWhite
+          top -10px
+          left 15px
+
+  &__icon
+    display block
+    width 47px
+    height 47px
+    margin 0 auto 22px
+    fill $cGray
+
+  &__legend
+    display flex
+    align-items flex-end
+    align-content flex-end
+
+    @media w_480
+      display inline-flex
+      flex-flow column
+      width calc(100% - 55px)
+
+    &__item
+      display inline-block
+      vertical-align top
+      width 25%
+      position relative
+      cursor pointer
+      padding-bottom 10px
+      background transparent
+      text-align left
+
+      &:focus
+        box-shadow 0 0 2px rgba(67,89, 147, 0.5)
+
+      @media w_480
+        display flex
+        align-items center
+        align-content center
+        width 100%
+        padding-right 0 !important
+        text-align left !important
+        min-height 50px
+
+      &:before
+        position absolute
+        content ""
+        height 20px
+        bottom -10px
+        left 0
+        width 1px
+        border-left 1px dotted #b4b4b4
+
+        @media w_480
+          width 20px
+          height 1px
+          border none
+          border-top 1px dotted #b4b4b4
+          bottom auto
+          top 50%
+          left -25px !important
+          margin-top -4px
+
+      &:nth-child(2)
+        padding-right 60px
+      &:nth-child(4)
+        text-align right
+
+        &:before
+          left auto
+          right 0
+
+      span
+        display inline-block
+        font-size 13px
+        line-height 19px

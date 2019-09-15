@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" viewport="width=device-width">
+    <title>Заголовок страницы</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common-app.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="width-wrap text-center">
+        <button class="header__hamburger js--toggle-menu">
+          <div></div>
+        </button>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#info" class="js--page-scroll">Личная информация</a></li>
+            <li><a href="#expirience" class="js--page-scroll">Опыт</a></li>
+            <li><a href="#js" class="js--page-scroll">JavaScript</a></li>
+            <li><a href="#about" class="js--page-scroll">О&nbsp;себе</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="profile">
+      <div id="info" class="profile__title menu_section">
+        <picture class="profile__title__bg">
+          <source srcset="img/bg__header-1920@1x.webp 1x, img/bg__header-1920@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+          <source srcset="img/bg__header-1920@1x.jpg 1x, img/bg__header-1920@2x.jpg 2x" media="(min-width: 1440px)">
+          <source srcset="img/bg__header-1440@1x.webp 1x, img/bg__header-1440@2x.webp 2x" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/bg__header-1440@1x.jpg 1x, img/bg__header-1440@2x.jpg 2x" media="(min-width: 1024px)">
+          <source srcset="img/bg__header-1024@1x.webp 1x, img/bg__header-1024@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/bg__header-1024@1x.jpg 1x, img/bg__header-1024@2x.jpg 2x" media="(min-width: 768px)">
+          <source srcset="img/bg__header-768@1x.webp 1x, img/bg__header-768@2x.webp 2x" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/bg__header-768@1x.jpg 1x, img/bg__header-768@2x.jpg 2x" media="(min-width: 480px)">
+          <source srcset="img/bg__header-480@1x.webp 1x, img/bg__header-480@2x.webp 2x" type="image/webp"><img src="img/bg__header-480@1x.jpg" srcset="img/bg__header-480@2x.jpg 2x" alt="Горы">
+        </picture>
+        <div class="width-wrap">
+          <h1>Анкета</h1>
+        </div>
+      </div>
+      <form action="" method="" class="main-form">
+        <div class="width-wrap">
+          <section class="profile__section">
+            <div class="profile__header">
+              <svg class="profile__icon">
+                <use xlink:href="img/sprite.svg#info"></use>
+              </svg>
+              <h2>Личная информация</h2>
+            </div>
+            <div class="profile__content profile__content_small">
+              <label class="label__input">
+                <input type="text" name="" placeholder="ФИО" value="Бевзюк Ольга Анатольевна" class="inp required has-text"><span class="label__title">ФИО</span>
+              </label>
+              <label class="label__input">
+                <select name="" class="js--select-styler">
+                  <option value="" disabled>Год рождения</option>
+                  <option value="">2000</option>
+                  <option value="">1999</option>
+                  <option value="">1998</option>
+                  <option value="">1996</option>
+                  <option value="">1995</option>
+                  <option value="">1994</option>
+                  <option value="">1993</option>
+                  <option value="">1992</option>
+                  <option value="">1991</option>
+                  <option value="">1990</option>
+                  <option value="">1989</option>
+                  <option value="">1988</option>
+                  <option value="">1987</option>
+                  <option value="">1986</option>
+                  <option value="">1985</option>
+                  <option value="">1984</option>
+                  <option value="">1983</option>
+                  <option value="" selected>1982</option>
+                  <option value="">1981</option>
+                  <option value="">1980</option>
+                </select>
+              </label>
+              <label class="label__input">
+                <input type="text" name="" placeholder="Место проживания" value="Смоленск" class="inp required has-text"><span class="label__title">Место проживания</span>
+              </label>
+              <label class="label__input">
+                <input type="text" name="" placeholder="Skype" value="chidiravenloft@gmail.com" class="inp required has-text"><span class="label__title"> Skype</span>
+              </label>
+              <label class="label__input">
+                <input type="email" name="" placeholder="E-mail" value="bev-olga@yandex.ru" class="inp required inp-mail has-text"><span class="label__title"> E-mail</span>
+              </label>
+            </div>
+          </section>
+          <section id="expirience" class="profile__section menu_section">
+            <div class="profile__header">
+              <svg class="profile__icon">
+                <use xlink:href="img/sprite.svg#expirience"></use>
+              </svg>
+              <h2>Расскажите о&nbsp;своем опыте</h2>
+            </div>
+            <div class="profile__content profile__content_expirience">
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>БЭМ/OOCSS</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>Stylus/LESS/SASS</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>Работаю с&nbsp;SVG</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>Верстаю семантично</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" name="">
+                <div class="psevdocheckbox"></div><span>ES2015/ES2016</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>Gulp/GRUNT</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" name="">
+                <div class="psevdocheckbox"></div><span>Webpack</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>jQuery</span>
+              </label>
+              <label class="label__checkbox">
+                <input type="checkbox" checked name="">
+                <div class="psevdocheckbox"></div><span>Ипользую Git</span>
+              </label>
+            </div>
+          </section>
+          <section id="js" class="profile__section menu_section">
+            <div class="profile__header">
+              <svg class="profile__icon">
+                <use xlink:href="img/sprite.svg#js"></use>
+              </svg>
+              <h2>Уровень владения JavaScript</h2>
+            </div>
+            <div class="profile__content profile__content_js">
+              <div class="hidden-block">
+                <input type="text" name="" value class="js--input-level">
+              </div>
+              <div class="profile__legend">
+                <button data-val="100" class="profile__legend__item js--set-slider"><span>Не&nbsp;владею</span></button>
+                <button data-val="75" class="profile__legend__item js--set-slider"><span>Использую готовые решения</span></button>
+                <button data-val="50" class="profile__legend__item js--set-slider"><span>Использую готовые решения и&nbsp;умею и&nbsp;переделывать</span></button>
+                <button data-val="0" class="profile__legend__item js--set-slider"><span>Пишу сложный&nbsp;JS с&nbsp;нуля</span></button>
+              </div>
+              <div id="range"></div>
+            </div>
+          </section>
+          <section id="about" class="profile__section menu_section">
+            <div class="profile__header">
+              <svg class="profile__icon">
+                <use xlink:href="img/sprite.svg#about"></use>
+              </svg>
+              <h2>Расскажите о&nbsp;себе</h2>
+              <p>Напишите несколько предложений, чем привлекла наша вакансия и&nbsp;что вы&nbsp;ожидаете от&nbsp;работы у&nbsp;нас.</p>
+            </div>
+            <div class="profile__content profile__content_small">
+              <textarea placeholder="Понравилась тем, что..." class="inp">Заинтересовала возможность поработать над крупными и интересными проектами, в которых можно развиваться. На фрилансе не всегда требуется использовать новые технологии, поэтому, со временем наступает деградация, которая невозможна в компании, где поддерживается определенный стандарт качества разработки.</textarea>
+            </div>
+          </section>
+          <section class="profile__section text-center">
+            <button type="submit" class="btn btn_blue">Готово</button>
+          </section>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+extends partials/layout
+
+block content
+    main.profile
+        div(id="info").profile__title.menu_section
+            picture.profile__title__bg
+                source(srcset="img/bg__header-1920@1x.webp 1x, img/bg__header-1920@2x.webp 2x" media="(min-width: 1440px)" type="image/webp" )
+                source(srcset="img/bg__header-1920@1x.jpg 1x, img/bg__header-1920@2x.jpg 2x" media="(min-width: 1440px)" )
+
+                source(srcset="img/bg__header-1440@1x.webp 1x, img/bg__header-1440@2x.webp 2x" media="(min-width: 1024px)" type="image/webp" )
+                source(srcset="img/bg__header-1440@1x.jpg 1x, img/bg__header-1440@2x.jpg 2x" media="(min-width: 1024px)" )
+
+                source(srcset="img/bg__header-1024@1x.webp 1x, img/bg__header-1024@2x.webp 2x" media="(min-width: 768px)" type="image/webp" )
+                source(srcset="img/bg__header-1024@1x.jpg 1x, img/bg__header-1024@2x.jpg 2x" media="(min-width: 768px)" )
+
+                source(srcset="img/bg__header-768@1x.webp 1x, img/bg__header-768@2x.webp 2x" media="(min-width: 480px)" type="image/webp" )
+                source(srcset="img/bg__header-768@1x.jpg 1x, img/bg__header-768@2x.jpg 2x" media="(min-width: 480px)" )
+
+                source(srcset="img/bg__header-480@1x.webp 1x, img/bg__header-480@2x.webp 2x" type="image/webp" )
+                img(src="img/bg__header-480@1x.jpg" srcset="img/bg__header-480@2x.jpg 2x" alt="Горы" )
+
+            .width-wrap
+                h1 Анкета
+
+        form(action="" method="").main-form
+            .width-wrap
+                section.profile__section
+                    .profile__header
+                        svg.profile__icon
+                            use(xlink:href="img/sprite.svg#info")
+
+                        h2 Личная информация
+
+                    .profile__content.profile__content_small
+                        label.label__input
+                            input(type="text" name="" placeholder="ФИО" value="Бевзюк Ольга Анатольевна").inp.required.has-text
+                            span.label__title ФИО
+                        label.label__input
+                            select(name="").js--select-styler
+                                option(value=""  disabled) Год рождения
+                                option(value="") 2000
+                                option(value="") 1999
+                                option(value="") 1998
+                                option(value="") 1996
+                                option(value="") 1995
+                                option(value="") 1994
+                                option(value="") 1993
+                                option(value="") 1992
+                                option(value="") 1991
+                                option(value="") 1990
+                                option(value="") 1989
+                                option(value="") 1988
+                                option(value="") 1987
+                                option(value="") 1986
+                                option(value="") 1985
+                                option(value="") 1984
+                                option(value="") 1983
+                                option(value="" selected) 1982
+                                option(value="") 1981
+                                option(value="") 1980
+
+                        label.label__input
+                            input(type="text" name="" placeholder="Место проживания" value="Смоленск").inp.required.has-text
+                            span.label__title Место проживания
+                        label.label__input
+                            input(type="text" name="" placeholder="Skype" value="chidiravenloft@gmail.com").inp.required.has-text
+                            span.label__title  Skype
+                        label.label__input
+                            input(type="email" name="" placeholder="E-mail" value="bev-olga@yandex.ru").inp.required.inp-mail.has-text
+                            span.label__title  E-mail
+
+                section(id="expirience").profile__section.menu_section
+                    .profile__header
+                        svg.profile__icon
+                            use(xlink:href="img/sprite.svg#expirience")
+
+                        h2 Расскажите о&nbsp;своем опыте
+
+                    .profile__content.profile__content_expirience
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span БЭМ/OOCSS
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span Stylus/LESS/SASS
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span Работаю с&nbsp;SVG
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span Верстаю семантично
+                        label.label__checkbox
+                            input(type="checkbox" name="")
+                            .psevdocheckbox
+                            span ES2015/ES2016
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span Gulp/GRUNT
+                        label.label__checkbox
+                            input(type="checkbox" name="")
+                            .psevdocheckbox
+                            span Webpack
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span jQuery
+                        label.label__checkbox
+                            input(type="checkbox" checked name="")
+                            .psevdocheckbox
+                            span Ипользую Git
+
+                section(id="js").profile__section.menu_section
+                    .profile__header
+                        svg.profile__icon
+                            use(xlink:href="img/sprite.svg#js")
+
+                        h2 Уровень владения JavaScript
+
+                    .profile__content.profile__content_js
+                        .hidden-block
+                            input(type="text" name="" value=).js--input-level
+
+                        .profile__legend
+                            button(data-val="100").profile__legend__item.js--set-slider
+                                span Не&nbsp;владею
+                            button(data-val="75").profile__legend__item.js--set-slider
+                                span Использую готовые решения
+                            button(data-val="50").profile__legend__item.js--set-slider
+                                span Использую готовые решения и&nbsp;умею и&nbsp;переделывать
+                            button(data-val="0").profile__legend__item.js--set-slider
+                                span Пишу сложный&nbsp;JS с&nbsp;нуля
+
+                        div(id="range")
+
+                section(id="about").profile__section.menu_section
+                    .profile__header
+                        svg.profile__icon
+                            use(xlink:href="img/sprite.svg#about")
+
+                        h2 Расскажите о&nbsp;себе
+
+                        p Напишите несколько предложений, чем привлекла наша вакансия и&nbsp;что вы&nbsp;ожидаете от&nbsp;работы у&nbsp;нас.
+
+                    .profile__content.profile__content_small
+                        textarea(placeholder="Понравилась тем, что..." ).inp Заинтересовала возможность поработать над крупными и интересными проектами, в которых можно развиваться. На фрилансе не всегда требуется использовать новые технологии, поэтому, со временем наступает деградация, которая невозможна в компании, где поддерживается определенный стандарт качества разработки.
+
+                section.profile__section.text-center
+                    button(type="submit").btn.btn_blue Готово

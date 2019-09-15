@@ -1,0 +1,97 @@
+.header
+  position fixed
+  left 0
+  top 0
+  right 0
+  background $cWhite
+  z-index 10
+  padding 31px 0 26px
+  max-height 80px
+  box-sizing content-box
+
+  @media w_768
+    padding 15px 0
+    max-height 45px
+
+  &.menu-open
+    .header__nav
+      @media w_768
+        transform translateY(0)
+
+  &__nav
+    display inline-block
+
+    @media w_768
+      position fixed
+      left 0
+      right 0
+      bottom 0
+      top 45px
+      background $cWhite
+      display flex
+      align-items center
+      align-content center
+      justify-content center
+      z-index 10
+      transition all 0.2s ease-in-out
+      transform translateY(-110%)
+
+    ul
+      li
+        display inline-block
+        vertical-align top
+        margin 0 33px
+
+        @media w_768
+          display block
+          margin 0 auto 20px
+          text-align center
+
+        a
+          display block
+          font-size 14px
+          color $cBlue
+          padding 0 5px
+
+          &:hover,
+          &:focus
+            color $cBlack
+
+          @media w_768
+            font-size 20px
+
+  &__hamburger
+    display none
+    background transparent
+    width 31px
+    height 16px
+    position relative
+    margin 0 auto
+    cursor pointer
+
+    @media w_768
+      display block
+
+    &:focus
+      box-shadow 0 0 2px rgba(67,89, 147, 0.5)
+
+    &:after,
+    &:before,
+    div
+      position absolute
+      content ""
+      left 0
+      right 0
+      height 2px
+      background $cBlue
+      transition all 0.2s ease-in-out
+      transform rotate(0)
+
+    &:before
+      top 0
+    &:after
+      bottom 0
+
+    div
+      top 50%
+      margin-top -1px
